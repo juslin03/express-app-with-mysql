@@ -1,0 +1,18 @@
+<%- include ("../pages/header") %>
+
+<div class="ui comments">
+  <h3 class="ui dividing header">Commentaire</h3>
+
+  <div class="comment">
+      <a class="avatar" href="/message/<%= message.id %>">
+        <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="avatar" >
+      </a>
+      <div class="content">
+          <div class="metadata">
+              <div class="date"> <%= message.create_at.fromNow() %> </div>
+          </div>
+          <div class="text"><%= message.content %> </div>
+      </div>
+  </div>
+</div>
+<%- include ("../pages/footer") %>
